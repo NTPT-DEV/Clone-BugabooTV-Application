@@ -12,7 +12,6 @@ const NameSection = ({title , titleColor = 'black' , link , linkColor = colors.l
     return (
         <View
             style={{
-                flex: 1,
                 marginHorizontal: 5,
                 zIndex: 1,
             }}

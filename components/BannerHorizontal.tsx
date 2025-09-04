@@ -13,7 +13,7 @@ const BannerHorizontal = ({ data, colorTitle }: BannerHorizontalProps) => {
       horizontal={true}
       showsHorizontalScrollIndicator={false}
     >
-      <View style={{ flex: 1, flexDirection: 'row', gap: 15, marginHorizontal: 5, marginVertical: 10 }}>
+      <View style={{ flexDirection: 'row' , gap : 10 }}>
         {data.map((item , index: number) => {
           return (
             <View key={index}>
