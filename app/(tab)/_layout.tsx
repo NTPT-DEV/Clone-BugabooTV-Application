@@ -1,5 +1,6 @@
-import { colors } from '../../constants/colors';
 
+
+import { colors } from '@/constants/utils';
 import { Tabs } from 'expo-router';
 import { House, Search, Tv, User } from 'lucide-react-native';
 import { useRef } from 'react';
@@ -51,7 +52,7 @@ const TabsLayout = () => (
       tabBarItemStyle: { justifyContent: 'center', alignItems: 'center' },
       tabBarButton: (props) => <CustomTabButton {...props} />,
       tabBarStyle : {
-        height: 100,
+        height: 110,
       }
     }}
   >
@@ -97,7 +98,7 @@ const styles = StyleSheet.create({
     flex: 1,
     width: 100,
     margin: 5,
-    borderRadius: 20,
+    borderRadius: 30,
     overflow: 'hidden',
     justifyContent: 'center',
     alignItems: 'center',

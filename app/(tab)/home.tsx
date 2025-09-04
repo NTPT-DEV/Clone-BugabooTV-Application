@@ -1,11 +1,16 @@
+
+import MenuIcon from '@/components/MenuIcon';
+import SugestForYou from '@/components/SugestForYou';
+import TopTenCard from '@/components/TopTenCard';
+import { colors, iconLists, imageCategory, topTenToday } from '@/constants/utils';
 import { LinearGradient } from 'expo-linear-gradient';
 import { StatusBar } from 'expo-status-bar';
 import { useVideoPlayer, VideoView } from 'expo-video';
-import { ArrowRight, Crown, Menu, Store } from 'lucide-react-native';
-import { Dimensions, Image, StyleSheet, Text, View } from 'react-native';
+import { ArrowRight, Crown, Menu, MoveRight, Store } from 'lucide-react-native';
+import { Dimensions, FlatList, Image, Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import BagabooTVLogo from '../../assets/svg/bugaboo-tv.svg';
 import HelpIcon from '../../assets/svg/helpIcon.svg';
-import { colors } from '../../constants/colors';
+
 
 
 
@@ -18,7 +23,7 @@ const HomeScreen = () => {
         player.play();
     });
     return (
-        <View style={styles.rootContainer}>
+        <ScrollView style={styles.rootContainer}>
             <StatusBar hidden={true} />
             <View style={styles.navBar}>
                 <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
@@ -50,7 +55,6 @@ const HomeScreen = () => {
                         style={[styles.gradientBorder,
                         { justifyContent: 'center', alignItems: 'center', width: 33, height: 33 }]}>
                         <Crown fill={'white'} color={'white'} width={15} height={15} />
-
                     </LinearGradient>
                 </View>
             </View>
@@ -70,7 +74,7 @@ const HomeScreen = () => {
                         style={
                             {
                                 padding: 2,
-                                borderRadius: 6,
+                                borderRadius: 8,
                             }}>
                         <Image
                             style={{
@@ -92,51 +96,143 @@ const HomeScreen = () => {
                         source={require('../../assets/images/logos/hot-news.png')} />
                 </View>
             </View>
-            <View style={{ 
-                padding: 14 , flexDirection: 'row' , justifyContent : 'space-between' , alignItems : 'center' }}>
+            <View style={{
+                padding: 14, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'
+            }}>
                 <View>
                     <Text
-                    style={{ 
-                    fontFamily : 'sukumvit-bold' , 
-                    fontSize : 20
-                    }}>ถ่ายทอดสด ช่อง 7HD</Text>
+                        style={{
+                            fontFamily: 'sukumvit-bold',
+                            fontSize: 20
+                        }}>ถ่ายทอดสด ช่อง 7HD</Text>
                     <Text
-                    style={{
-                        fontFamily : 'sukumvit-text' , 
-                        fontSize : 16 , 
-                        color : colors.darkGray
-                    }}
+                        style={{
+                            fontFamily: 'sukumvit-text',
+                            fontSize: 16,
+                            color: colors.darkGray
+                        }}
                     >ละครสิ้นไร้ไฟสวาท (Rerun)</Text>
                 </View>
                 <View style={{ flexDirection: 'row', alignItems: 'center', gap: 5 }}>
-                    <Text
-                    style={{
-                        fontFamily : 'sukumvit-semibold' , 
-                        fontSize : 16 , 
-                        color : colors.darkPurple
-                    }}
-                    >ดูรายการสด </Text>
-                    <ArrowRight color={colors.darkPurple}  />
+                    <TouchableOpacity
+                        style={{ flexDirection: 'row', alignItems: 'center', gap: 5 }}
+                        onPress={() => {
+                            Linking.openURL('https://www.bugaboo.tv/th/live/');
+                        }}>
+                        <Text
+                            style={{
+                                fontFamily: 'sukumvit-semibold',
+                                fontSize: 16,
+                                color: colors.darkPurple
+                            }}
+                        >ดูรายการสด </Text>
+                        <ArrowRight color={colors.darkPurple} />
+                    </TouchableOpacity>
                 </View>
             </View>
-            <View style={{ 
-                padding: 14 , flexDirection: 'row' , justifyContent : 'space-between' , alignItems : 'center' }}>
+            <View style={{
+                padding: 14, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'
+            }}>
                 <View>
                     <Text
-                    style={{ 
-                    fontFamily : 'sukumvit-bold' , 
-                    fontSize : 28
-                    }}>ขอต้อนรับสู่ BUGABOO TV</Text>
+                        style={{
+                            fontFamily: 'sukumvit-bold',
+                            fontSize: 28
+                        }}>ขอต้อนรับสู่ BUGABOO TV</Text>
                     <Text
-                    style={{
-                        fontFamily : 'sukumvit-text' , 
-                        fontSize : 16 , 
-                        color : colors.darkGray
-                    }}
+                        style={{
+                            fontFamily: 'sukumvit-text',
+                            fontSize: 16,
+                            color: colors.darkGray
+                        }}
                     >เนื้อหาแนะนำสำหรับคุณ</Text>
                 </View>
+
             </View>
+
+            <View style={{ flex: 1, paddingHorizontal: 10 }}>
+                <FlatList
+                    data={imageCategory}
+                    keyExtractor={(item) => item.title + item.title}
+                    horizontal={true}
+                    showsHorizontalScrollIndicator={false}
+                    renderItem={({ item }) => {
+                        return (
+                            <SugestForYou
+                                title={item.title}
+                                nameCategory={item.nameCategory}
+                                image={item.imageCategory}
+                                link={item.link}
+                            />
+                        )
+                    }}
+                />
+            </View>
+            <ScrollView
+                horizontal={true} showsHorizontalScrollIndicator={false} >
+                <View style={{
+                    flex: 1,
+                    alignItems: 'flex-start',
+                    flexDirection: 'row',
+                    marginVertical: 20,
+                    marginHorizontal: 10,
+                    gap: 12
+                }}>
+                    {iconLists.map((item, index: number) => (
+                        <MenuIcon key={index} title={item.title} icon={item.icon} link={item.link} />
+                    ))}
+                </View>
+            </ScrollView>
+            {/* Top 10 Section */}
+
+            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                <Text
+                    style={{
+                        fontFamily: 'sukumvit-bold',
+                        fontSize: 20,
+                        letterSpacing: -0.1,
+                        paddingHorizontal: 14
+                    }}
+                >Top 10 Today</Text>
+                <TouchableOpacity
+                    style={{ flexDirection: 'row', alignItems: 'center', gap: 5 }}
+                    onPress={() => {
+                        Linking.openURL('https://www.bugaboo.tv/th/all/top-today/');
+                    }}>
+                    <Text
+                        style={{
+                            fontFamily: 'sukumvit-semibold',
+                            fontSize: 14,
+                            color: colors.darkPurple
+                        }}
+                    >ดูทั้งหมด</Text>
+                    <MoveRight color={colors.darkPurple} />
+                </TouchableOpacity>
+            </View>
+
+            <View style={{ marginHorizontal: 10, marginVertical: 20 }}>
+                <FlatList 
+                data={topTenToday}
+                horizontal={true}
+                showsHorizontalScrollIndicator={false}
+                keyExtractor={(item) => item.name }
+                renderItem={({item , index}) => {
+                    return(
+                        <TopTenCard name={item.name} image={item.image} link={item.link} index={index} />
+                    )
+                }}
+                />
+            </View>
+
+            {/* Hight Light Section */}
+
+        <View style={{ paddingHorizontal : 10}}>
+            <Text>
+                ไฮไลท์แนะนำ
+            </Text>
         </View>
+
+        </ScrollView>
     )
 }
 export default HomeScreen
@@ -184,14 +280,13 @@ const styles = StyleSheet.create({
         height: 30,
     },
     videoContainer: {
-         justifyContent: 'center', alignItems: 'center'
+        justifyContent: 'center', alignItems: 'center'
     },
     video: {
         width: widthScreen,
         aspectRatio: 16 / 9
     },
     imageContainer: {
-        
         flexDirection: 'row',
         marginVertical: 12,
         gap: 8,

@@ -5,3 +5,9 @@ declare module '*.svg' {
   export default content;
 }
 declare module '@/*';
+
+declare module '*.jpg';
+declare module '*.png';
+declare module '*.jpeg';
+declare module '*.gif';
+declare module '*.webp';
