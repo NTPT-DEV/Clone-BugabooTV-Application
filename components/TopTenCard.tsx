@@ -30,7 +30,7 @@ const TopTenCard = ({name , image , link , index} : ToptenProps) => {
                         />
                     </MaskedView>
                     <Text style={styles.iconText}>{index! + 1 }</Text>
-                </View>s
+                </View>
             </View>
             <Image
                 style={styles.image}
@@ -42,6 +42,8 @@ const TopTenCard = ({name , image , link , index} : ToptenProps) => {
     )
 }
 export default TopTenCard
+
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
