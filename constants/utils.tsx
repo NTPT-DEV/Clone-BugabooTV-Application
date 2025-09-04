@@ -6,9 +6,11 @@ import { Clapperboard, Crown, Film, Plane, Search, ShoppingBag, Volleyball } fro
 export const colors = {
     purple: '#823DFF',
     lightPurple: '#EAE9FF',
+    lightPurple2: '#c5a5ffff',
     darkPurple: '#823DFF',
     gray: '#a8a8a8ff',
     darkPurple2: '#7C2AFF',
+    darkPurple3: '#130033ff',
     lightBlue: '#56A6FD',
     darkGray: '#303030ff',
     lightGray: '#c7c7c7ff'
@@ -152,7 +154,7 @@ interface PoppularTagProps {
     tagTitle: string
 }
 
-export const popularTag = [
+export const popularTag : PoppularTagProps[] = [
     { tagTitle: 'เติ้ล ธนพล' },
     { tagTitle: 'นักแสดงช่อง 7' },
     { tagTitle: 'เข้ม หัสวีร์' },
@@ -191,3 +193,61 @@ export const newContent = [
         link: 'https://www.bugaboo.tv/th/variety/yingkhuy-yingluek/1756973447157/'
     },
 ]
+
+export const dramaCH7 = [
+    {
+        title: 'ผีเสื้อสลับลาย',
+        tag: 'ดราม่า',
+        image: require('../assets/images/dramaCH7/01.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/stolenwings/'
+    },
+    {
+        title: 'เดชอสูรขันแก้วนพเก้า',
+        tag: 'นิทานพื้นบ้าน',
+        image: require('../assets/images/dramaCH7/02.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/dejasoonkwankaewnoppakao/'
+    },
+    {
+        title: 'ชาติลำชี',
+        tag: 'ละครเพลง',
+        image: require('../assets/images/dramaCH7/03.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/the-river-chis-protector/'
+    },
+ 
+    {
+        title: 'ไม่สิ้นไร้ไฟสวาท',
+        tag: 'ดราม่า',
+        image: require('../assets/images/dramaCH7/04.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/mai-sin-rai-fai-sawat-fires-of-passion/'
+    },
+    {
+        title: 'ฟ้าหินดินทราย',
+        tag: 'ดราม่า',
+        image: require('../assets/images/dramaCH7/05.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/fah-hin-din-sai/'
+    },
+    {
+        title: 'กู้ภัยอาสารัก',
+        tag: 'คอมเมดี้',
+        image: require('../assets/images/dramaCH7/06.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/khoo-phai-ar-sa-rak/'
+    },
+    {
+        title: 'แคน2แผ่นดิน',
+        tag: 'แอกชั่น',
+        image: require('../assets/images/dramaCH7/07.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/can-song-pan-din/'
+    },
+    {
+        title: 'บ่วงหงส์',
+        tag: 'ดราม่า',
+        image: require('../assets/images/dramaCH7/08.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/boung-hong/'
+    },
+    {
+        title: 'เหนี่ยวหัวใจสุดไกปืน',
+        tag: 'แอกชั่น',
+        image: require('../assets/images/dramaCH7/09.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/the-braves-the-loves-the-country-the-spirit-of-the-ruler/'
+    },
+] 
