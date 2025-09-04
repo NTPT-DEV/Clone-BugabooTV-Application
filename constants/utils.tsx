@@ -10,7 +10,8 @@ export const colors = {
     gray: '#a8a8a8ff',
     darkPurple2: '#7C2AFF',
     lightBlue: '#56A6FD',
-    darkGray: '#303030ff'
+    darkGray: '#303030ff',
+    lightGray: '#c7c7c7ff'
 }
 
 
@@ -92,4 +93,101 @@ export const topTenToday: ToptenProps[] = [
     { name: 'ONE ลุมพินี', image: require('../assets/images/posterTopTen/08.png'), link: 'https://www.bugaboo.tv/th/variety/onelumpinee/' },
     { name: 'เสียงจากหลุม', image: require('../assets/images/posterTopTen/09.jpg'), link: 'https://www.bugaboo.tv/th/originals/siangchaklum/' },
     { name: 'ติดลมบน', image: require('../assets/images/posterTopTen/10.jpg'), link: 'https://www.bugaboo.tv/th/originals/tidlombon/' },
+];
+
+
+interface HighlightProps {
+    title: string
+    date: string
+    image: number
+    link: string
+}
+
+export const highLight: HighlightProps[] = [
+    {
+        title: 'พันธ์พยัคฆ์ จิตรเมืองนนท์ vs อัสซาดูลาห์ อิมานกาซาลิเอฟ ศึก ONE ลุมพินี 122 | 29',
+        image: require('../assets/images/highlight/01.jpg'),
+        date: '29 ส.ค.68',
+        link: 'https://www.bugaboo.tv/th/variety/onelumpinee/1756485608340/',
+    },
+    {
+        title: 'EP.26 ที่สุดของความสด ธรรมชาติซีฟู้ด ครองตลาดอาหารทะเล ยอดขายทะลุพันล้าน | ติดลมบน มหาชนTalk',
+        image: require('../assets/images/highlight/02.jpg'),
+        date: '3 ก.ย.2568',
+        link: 'https://www.bugaboo.tv/th/originals/tidlombon/1756801578237/',
+    },
+    {
+        title: 'EP.17 ความ Shine ที่ไม่เคยเปลี่ยน - สน ยุกต์ | TALK TO U',
+        image: require('../assets/images/highlight/03.jpg'),
+        date: '29 ส.ค.2568',
+        link: 'https://www.bugaboo.tv/th/originals/tidlombon/1756801578237/',
+    },
+    {
+        title: 'ยิ่งคุย ยิ่งลึก EP.131 ถอดรหัสการเมืองไทย ก่อนโหวตนายกฯ พรุ่งนี้',
+        image: require('../assets/images/highlight/04.jpg'),
+        date: '4 ก.ย.2568',
+        link: 'https://www.bugaboo.tv/th/variety/yingkhuy-yingluek/1756972423187/',
+    },
+    {
+        title: 'ละครดี Recap EP.7 : ขุนเดช',
+        image: require('../assets/images/highlight/05.jpg'),
+        date: '1 ก.ย.2568',
+        link: 'https://www.bugaboo.tv/th/variety/lakorndeerecap/1756469726324/',
+    },
+    {
+        title: '7 คาเฟ่นครนายก Pet Friendly พาสัตว์เลี้ยงเข้าได้ ใกล้กรุงเทพ',
+        image: require('../assets/images/highlight/06.jpg'),
+        date: '29 ส.ค.2568',
+        link: 'https://www.bugaboo.tv/th/lifestyle/68194/',
+    },
+    {
+        title: 'ในที่สุดความจริงก็ปรากฏ | ตอกย้ำความสนุก ผีเสื้อสลับลาย EP.28',
+        image: require('../assets/images/highlight/07.jpg'),
+        date: '3 ก.ย.2568',
+        link: 'https://www.bugaboo.tv/th/video/68336/',
+    },
+];
+
+interface PoppularTagProps {
+    tagTitle: string
+}
+
+export const popularTag = [
+    { tagTitle: 'เติ้ล ธนพล' },
+    { tagTitle: 'นักแสดงช่อง 7' },
+    { tagTitle: 'เข้ม หัสวีร์' },
+    { tagTitle: 'ของทุกเดือน' },
+    { tagTitle: '7 สีคอนเสิร์ต เฟสติวัล' },
+    { tagTitle: 'หยก ธัญยกันต์' },
+    { tagTitle: 'ดูละครย้อนหลังช่อง 7' },
+    { tagTitle: 'มิ้น มารนิตา' },
+    { tagTitle: 'เรื่องย่อ ละครช่อง 7' },
+
+];
+
+export const newContent = [
+    {
+        title: 'ไฮไลต์ ยิ่งคุย ยิ่งลึก EP.131 เท้ง หัวหน้าพรรคส้มที่อ่อนกว่า ธนาธร | ถอดรหัสการเมืองไทย ก่อนโหวตนายกฯ พรุ่งนี้',
+        date: '4.ก.ย 68',
+        image: require('../assets/images/newContent/01.jpg'),
+        link: 'https://www.bugaboo.tv/th/variety/yingkhuy-yingluek/1756975151253/'
+    },
+    {
+        title: 'Picpost Review EP.25 ทันกันไหม ? นิตยสารรายการโทรทัศน์ช่อง 7',
+        date: '4.ก.ย 68',
+        image: require('../assets/images/newContent/02.jpg'),
+        link: 'https://www.bugaboo.tv/th/variety/picpost-review/1756984272068/'
+    },
+    {
+        title: 'วิธีทำให้สายเรียกเข้าขึ้นเต็มจอขณะใช้งาน บน Android | How To Tricks EP.318',
+        date: '4.ก.ย 68',
+        image: require('../assets/images/newContent/03.jpg'),
+        link: 'https://www.bugaboo.tv/th/variety/how-to-tricks/1756974406799/'
+    },
+    {
+        title: 'ไฮไลต์ ยิ่งคุย ยิ่งลึก EP.131 พรรคส้ม จะเสียคะแนนที่เป็นนั่งร้านให้ อนุทิน | ถอดรหัสการเมืองไทย ก่อนโหวตนายกฯ พรุ่งนี้',
+        date: '4.ก.ย 68',
+        image: require('../assets/images/newContent/04.jpg'),
+        link: 'https://www.bugaboo.tv/th/variety/yingkhuy-yingluek/1756973447157/'
+    },
 ]
