@@ -1,8 +1,8 @@
 
+import BannerHorizontal from '@/components/BannerHorizontal';
 import BannerVertical from '@/components/BannerVertical';
 import MenuIcon from '@/components/MenuIcon';
 import NameSection from '@/components/NameSection';
-import NewContent from '@/components/NewContent';
 import SugestForYou from '@/components/SugestForYou';
 import TopTenCard from '@/components/TopTenCard';
 import { colors, dramaCH7, highLight, iconLists, imageCategory, newContent, popularTag, topTenToday } from '@/constants/utils';
@@ -349,6 +349,7 @@ const HomeScreen = () => {
             </View>
 
             {/* Poppular Tag */}
+
             <View style={{
                 marginHorizontal: 10,
                 marginVertical: 20,
@@ -378,6 +379,7 @@ const HomeScreen = () => {
                 />
             </View>
 
+            {/* New Content Section */}
 
             <View style={styles.newContentContainer}>
                 <Text
@@ -390,21 +392,8 @@ const HomeScreen = () => {
                     เนื้อหามาใหม่
                 </Text>
             </View>
-            {/* New Content Sections */}
-            <ScrollView
-                horizontal={true}
-                showsHorizontalScrollIndicator={false}
-            >
-                <View style={{ flex: 1, flexDirection: 'row', gap: 15, marginHorizontal: 10, marginVertical: 20 }}>
-                    {newContent.map((item, index) => {
-                        return (
-                            <View key={index}>
-                                <NewContent title={item.title} image={item.image} date={item.date} link={item.link} />
-                            </View>
-                        )
-                    })}
-                </View>
-            </ScrollView>
+
+            <BannerHorizontal data={newContent} />
 
             {/* Drama Ch7 Section */}
             <View
@@ -438,7 +427,16 @@ const HomeScreen = () => {
                     data={dramaCH7}
                     renderItem={({ item, index }) => {
                         return (
-                            <BannerVertical {...item} index={index} titleColor={'white'} />
+                            <BannerVertical
+                                title={item.title}
+                                tag={item.tag}
+                                image={item.image}
+                                link={item.link}
+                                index={index}
+                                titleColor={'white'}
+                                tagTitleColor={'white'}
+
+                            />
                         )
                     }}
                     keyExtractor={(item, index) => item.title + index.toString()}
@@ -447,6 +445,7 @@ const HomeScreen = () => {
             </View>
 
             {/* ดราม่าน้ำตาคลอ Section*/}
+
             <View style={{
                 flex: 1,
                 padding: 10,
@@ -460,7 +459,16 @@ const HomeScreen = () => {
                     data={dramaCH7}
                     renderItem={({ item, index }) => {
                         return (
-                            <BannerVertical {...item} index={index} titleColor={'white'} />
+                            <BannerVertical
+                                title={item.title}
+                                tag={item.tag}
+                                image={item.image}
+                                link={item.link}
+                                index={index}
+                                titleColor={colors.darkGray}
+                                tagTitleColor={colors.purple}
+
+                            />
                         )
                     }}
                     keyExtractor={(item, index) => item.title + index.toString()}
@@ -482,7 +490,15 @@ const HomeScreen = () => {
                     data={dramaCH7}
                     renderItem={({ item, index }) => {
                         return (
-                            <BannerVertical {...item} index={index} titleColor={'white'} />
+                            <BannerVertical
+                                title={item.title}
+                                tag={item.tag}
+                                image={item.image}
+                                link={item.link}
+                                index={index}
+                                titleColor={colors.darkGray}
+                                tagTitleColor={colors.purple}
+                            />
                         )
                     }}
                     keyExtractor={(item, index) => item.title + index.toString()}
@@ -522,7 +538,16 @@ const HomeScreen = () => {
                     data={dramaCH7}
                     renderItem={({ item, index }) => {
                         return (
-                            <BannerVertical {...item} index={index} titleColor={'white'} />
+                            <BannerVertical
+                                title={item.title}
+                                tag={item.tag}
+                                image={item.image}
+                                link={item.link}
+                                index={index}
+                                titleColor={'white'}
+                                tagTitleColor={'white'}
+
+                            />
                         )
                     }}
                     keyExtractor={(item, index) => item.title + index.toString()}
@@ -561,13 +586,51 @@ const HomeScreen = () => {
                     data={dramaCH7}
                     renderItem={({ item, index }) => {
                         return (
-                            <BannerVertical {...item} index={index} titleColor={'white'} />
+                            <BannerVertical
+                                title={item.title}
+                                tag={item.tag}
+                                image={item.image}
+                                link={item.link}
+                                index={index}
+                                titleColor={'white'}
+                                tagTitleColor={'white'}
+                            />
                         )
                     }}
                     keyExtractor={(item, index) => item.title + index.toString()}
                 />
 
             </View>
+
+
+            {/* Short Series Section */}
+            <View
+                style={{
+                    flex: 1,
+                    height: 'auto',
+                    backgroundColor: colors.darkPurple3,
+                    position: 'relative',
+                    overflow: 'hidden',
+                    paddingTop: 10,
+                    padding: 10
+                }}
+            >
+                <Image
+                    source={require('../../assets/images/imageBackground/bg01.jpg')}
+                    blurRadius={2}
+                    style={{
+                        ...StyleSheet.absoluteFillObject,
+                        position: 'absolute',
+                        left: -450,
+                        resizeMode: 'cover',
+                        opacity: 0.2,
+                        zIndex: 0,
+                    }}
+                />
+                <NameSection title={'ORIGINALS'} titleColor={'white'} link={'https://www.bugaboo.tv/th/drama/'} />
+                <BannerHorizontal data={newContent} colorTitle='white' />
+            </View>
+
 
 
 

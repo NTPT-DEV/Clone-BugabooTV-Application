@@ -8,11 +8,11 @@ interface Props {
 
 }
 
-const TagComp = ({ ...item }: Props) => {
+const TagComp = ({ bgColor , tag  , borderColor ,tagTitleColor }: Props) => {
   return (
     <View style={{
-      backgroundColor: item.bgColor,
-      borderColor: item.borderColor,
+      backgroundColor: bgColor,
+      borderColor: borderColor,
       borderWidth: 1,
       paddingHorizontal: 8,
       paddingVertical: 3,
@@ -22,9 +22,9 @@ const TagComp = ({ ...item }: Props) => {
 
     }}>
       <Text style={{
-        color: item.tagTitleColor,
+        color:tagTitleColor,
         fontFamily: 'sukumvit-semibold'
-      }}>{item.tag}</Text>
+      }}>{tag}</Text>
     </View>
   )
 }

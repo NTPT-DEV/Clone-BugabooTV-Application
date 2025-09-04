@@ -9,20 +9,22 @@ interface ToptenProps {
     index?: number
     tag?: string
     titleColor?: string
+    tagTitleColor?: string
+
 }
-const BannerVertical = ({ ...item }: ToptenProps) => {
+const BannerVertical = ({ title, image, link, tag, titleColor, tagTitleColor }: ToptenProps) => {
 
     return (
         <TouchableOpacity
-            onPress={() => Linking.openURL(item.link!)}
+            onPress={() => Linking.openURL(link!)}
             style={styles.container}>
             <Image
                 style={styles.image}
-                source={item.image}
+                source={image}
             />
-            <View style={{marginHorizontal : 5}} >
-                <TagComp {...item} tagTitleColor={colors.purple} borderColor={colors.purple} />
-                <Text style={[styles.title, { color: item.titleColor }]}>{item.title!}</Text>
+            <View style={{ marginHorizontal: 5 }} >
+                <TagComp tag={tag} tagTitleColor={tagTitleColor} borderColor={colors.purple} />
+                <Text style={[styles.title, { color: titleColor }]}>{title!}</Text>
             </View>
 
         </TouchableOpacity>

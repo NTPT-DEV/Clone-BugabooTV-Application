@@ -1,16 +1,17 @@
 import { colors } from '@/constants/utils';
 import { Image, Linking, Pressable, StyleSheet, Text, View } from 'react-native';
 
-interface NewContentProps {
+export interface NewContentProps {
     title: string;
     date: string;
     image: number;
     link: string;
+    colorTitle?: string
 }
 
-
-const NewContent = ({ title, date, image, link }: NewContentProps) => {
+const NewContent = ({ title, date, image, link, colorTitle }: NewContentProps) => {
     return (
+
         <Pressable
             onPress={() => Linking.openURL(link)}
         >
@@ -31,7 +32,7 @@ const NewContent = ({ title, date, image, link }: NewContentProps) => {
                             fontFamily: 'sukumvit-semibold',
                             fontSize: 18,
                             lineHeight: 20,
-                            color: colors.darkGray
+                            color: colorTitle
                         }}
                         numberOfLines={2}
                         ellipsizeMode="tail"
