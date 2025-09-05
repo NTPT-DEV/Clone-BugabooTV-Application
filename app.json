@@ -21,7 +21,7 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.ntpt.CloneBugabooApp"
+      "package": "com.ntpt.clonebugabooapp"
     },
     "web": {
       "bundler": "metro",
