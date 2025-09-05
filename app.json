@@ -20,7 +20,8 @@
         "resizeMode": "contain",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.ntpt.CloneBugabooApp"
     },
     "web": {
       "bundler": "metro",
