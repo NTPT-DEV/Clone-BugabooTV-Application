@@ -699,3 +699,140 @@ export const sportCategory = [
     },
 ]
 
+
+export const lastNews = [
+    {
+        title: 'ไดอยสุเทพ-ปุย เก็บเงินค่าเข้า เริ่ม 1 ต.ค. 68',
+        date: '5.ก.ย 68',
+        image: require('../assets/images/lastNews/01.jpg'),
+        link: 'https://www.bugaboo.tv/th/news/68461/'
+    },
+    {
+        title: "GABBY'S DOLLHOUSE: THE MOVIE เตรียมตัวบีบหูซ้าย บีบหูขวา หมุน ๆ แล้วย่อส่วน!! ในตัวอย่างแรกของหนัง",
+        date: '5.ก.ย 68',
+        image: require('../assets/images/lastNews/02.jpg'),
+        link: 'https://www.bugaboo.tv/th/news/68460/'
+    },
+    {
+        title: "เครยอนชินจัง เดอะมูฟวี่: ร้อนแรงแซ่บเว่อร์! แดนเซอร์แห่งคาซึคาเบะ “ลาก่อนนะ ชินจัง?!” ในบนโปสเตอร์แรกจากหนัง",
+        date: '5.ก.ย 68',
+        image: require('../assets/images/lastNews/03.jpg'),
+        link: 'https://www.bugaboo.tv/th/news/68459/'
+    },
+    {
+        title: "Caught Stealing คนเดือดขวางทางโจร “ออสติน บัตเลอร์” เตรียมซวย ทำไมทุกคนจ้องฆ่าผม",
+        date: '5.ก.ย 68',
+        image: require('../assets/images/lastNews/04.jpg'),
+        link: 'https://www.bugaboo.tv/th/news/68458/'
+    },
+    {
+        title: "รักสุดฟินเลเวล999กับยามาดะคุง เตรียมหัวใจให้พร้อมไปกับความรักแบบเกมเมอร์ ในตัวอย่างและใบปิดแรก",
+        date: '5.ก.ย 68',
+        image: require('../assets/images/lastNews/05.jpg'),
+        link: 'https://www.bugaboo.tv/th/news/68457/'
+    },
+    {
+        title: "สะเก็ดข่าว | FULL EP | 4 ก.ย.68",
+        date: '5.ก.ย 68',
+        image: require('../assets/images/lastNews/06.jpg'),
+        link: 'https://www.bugaboo.tv/th/news/68436/'
+    },
+    {
+        title: "สะเก็ดข่าว : ต้องลุ้น",
+        date: '5.ก.ย 68',
+        image: require('../assets/images/lastNews/07.jpg'),
+        link: 'https://www.bugaboo.tv/th/news/68435/'
+    },
+    {
+        title: "สะเก็ดข่าว : ข้ามถนน",
+        date: '5.ก.ย 68',
+        image: require('../assets/images/lastNews/08.jpg'),
+        link: 'https://www.bugaboo.tv/th/news/68434/'
+    },
+    {
+        title: "สะเก็ดข่าว : น้องห่านคูเมือง",
+        date: '5.ก.ย 68',
+        image: require('../assets/images/lastNews/09.jpg'),
+        link: 'https://www.bugaboo.tv/th/news/68433/'
+    },
+    {
+        title: "ฝนฟ้าอากาศ 4 ก.ย.68",
+        date: '5.ก.ย 68',
+        image: require('../assets/images/lastNews/10.jpg'),
+        link: 'https://www.bugaboo.tv/th/news/68432/'
+    },
+    
+
+]
+
+
+export const popularTag2  = [
+    { tagTitle: 'เส้นทางบันเทิง 31 ธันวาคม 2564' },
+    { tagTitle: 'ตัวอย่างหนัง Bride Hard อึดนรกแต่ง' },
+    { tagTitle: 'มงคลเมเจอร์' },
+    { tagTitle: 'ข่าวบันเทิง' },
+    { tagTitle: 'ดาบพิฆาตอสูร ภาคปราสาทไร้ขอบเขต' },
+    { tagTitle: 'Despicable Me 4 มิสเตอร์แสบ ร้ายเกินพิกัด 4' },
+    { tagTitle: 'เที่ยงบันเทิงสด' },
+    { tagTitle: 'รายการบันเทิงช่อง7' },
+    { tagTitle: 'ทำบุญ' },
+
+];
+
+export const techCategory = [
+    {
+        title: 'วิธีทำให้สายเรียกเข้าขึ้นเต็มจอขณะใช้งาน บน Android | How To Tricks EP.318',
+        date: '4.ก.ย 68',
+        image: require('../assets/images/techCategory/01.jpg'),
+        link: 'https://www.bugaboo.tv/th/variety/how-to-tricks/1756974406799/'
+    },
+    {
+        title: 'วิธีประหยัดแบต iPhone (iOS 26) ยืดแบตอึดกับฟีเจอร์ Adaptive Power Mode | How To Tricks',
+        date: '4.ก.ย 68',
+        image: require('../assets/images/techCategory/02.jpg'),
+        link: 'https://www.bugaboo.tv/th/variety/how-to-tricks/1756439801684/'
+    },
+    {
+        title: 'วิธีทำให้สายเรียกเข้าขึ้นเต็มจอขณะใช้งาน บน iPhone | How To Tricks EP.316',
+        date: '4.ก.ย 68',
+        image: require('../assets/images/techCategory/03.jpg'),
+        link: 'https://www.bugaboo.tv/th/variety/how-to-tricks/1755766959840/'
+    },
+    {
+        title: 'วิธีป้องกันมิจฉาชีพ ส่งข้อความหาเราในแชท Facebook Messenger | How To Tricks EP.315',
+        date: '4.ก.ย 68',
+        image: require('../assets/images/techCategory/04.jpg'),
+        link: 'https://www.bugaboo.tv/th/variety/how-to-tricks/1755232854292/'
+    },
+    {
+        title: 'Audio Sharing วิธีแชร์เสียงหูฟัง AirPods ร่วมกับเพื่อนบน iPhone หรือ iPad | How To Tricks EP.314',
+        date: '7 ส.ค. 2568',
+        image: require('../assets/images/techCategory/05.jpg'),
+        link: 'https://www.bugaboo.tv/th/variety/how-to-tricks/1754538734432/'
+    },
+    {
+        title: 'วิธีเคลียร์พื้นที่ Gmail เต็ม หมดปัญหาเมลล้น ทริคง่าย ๆ ทำได้ทันที | How To Tricks EP.313',
+        date: '1 ส.ค.2568',
+        image: require('../assets/images/techCategory/06.jpg'),
+        link: 'https://www.bugaboo.tv/th/variety/how-to-tricks/1754025336423/'
+    },
+    {
+        title: 'รวม 5 ฟีเจอร์ใหม่ Facebook Messenger เพิ่มลูกเล่นอะไรบ้าง | How To Tricks EP.311',
+        date: '1 ส.ค.2568',
+        image: require('../assets/images/techCategory/07.jpg'),
+        link: 'https://www.bugaboo.tv/th/variety/how-to-tricks/1752814494095/'
+    },
+    {
+        title: "LINE อัพเดตฟีเจอร์ 'รีแอคชั่น' ส่งรีแอคชั่นข้อความด้วยอิโมจิเพิ่มขึ้น | How To Tricks EP.310",
+        date: '9 ก.ค. 2568',
+        image: require('../assets/images/techCategory/08.jpg'),
+        link: 'https://www.bugaboo.tv/th/variety/how-to-tricks/1752060282408/'
+    },
+    {
+        title: "วิธีใช้ Chain สตอรี่ ฟีเจอร์ใหม่ใน Instagram | How To Tricks EP.309",
+        date: '3 ก.ค. 2568',
+        image: require('../assets/images/techCategory/09.jpg'),
+        link: 'https://www.bugaboo.tv/th/variety/how-to-tricks/1751540865676/'
+    },
+
+]
