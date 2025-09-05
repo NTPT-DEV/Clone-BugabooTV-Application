@@ -1,6 +1,4 @@
-import { colors } from '@/constants/utils';
 import { Image, Linking, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import TagComp from './TagComp';
 
 interface ToptenProps {
     title?: string
@@ -10,9 +8,13 @@ interface ToptenProps {
     tag?: string
     titleColor?: string
     tagTitleColor?: string
+    logo ? : number 
+    titleLogo ? : string
+    titleLogoColor ? : string 
+    borderColor?  : string
 
 }
-const BannerVertical = ({ title, image, link, tag, titleColor, tagTitleColor }: ToptenProps) => {
+const BannerVerticalOriginal = ({ title, image, link, tag, titleColor, tagTitleColor , logo , titleLogo , titleLogoColor , borderColor }: ToptenProps) => {
 
     return (
         <TouchableOpacity
@@ -22,15 +24,35 @@ const BannerVertical = ({ title, image, link, tag, titleColor, tagTitleColor }: 
                 style={styles.image}
                 source={image}
             />
-            <View style={{ marginHorizontal: 5 }} >
-                <TagComp tag={tag} tagTitleColor={tagTitleColor} borderColor={colors.purple} />
+            <View style={{
+                marginTop : 7 , 
+                borderWidth : 1 , 
+                borderColor : borderColor,
+                borderRadius : 5,
+                justifyContent : 'center' , 
+                alignItems : 'center' , 
+                flexDirection : 'row' , 
+                paddingVertical : 6,
+                gap : 3
+            }}>
+                <Image source={logo} 
+                style={{width : 20 , height : 20 , resizeMode : 'cover'}}
+                />
+                <Text style={{
+                    fontFamily : 'sukumvit-semibold',
+                    fontSize : 14 , 
+                    color : titleLogoColor
+                }}>{titleLogo}</Text>
+            </View>
+            <View style={{ marginHorizontal: 5}} >
+                {/* <TagComp tag={tag} tagTitleColor={tagTitleColor} borderColor={colors.purple} /> */}
                 <Text style={[styles.title, { color: titleColor }]}>{title!}</Text>
             </View>
 
         </TouchableOpacity>
     )
 }
-export default BannerVertical
+export default BannerVerticalOriginal
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -45,7 +67,7 @@ const styles = StyleSheet.create({
         resizeMode: 'cover',
     },
     title: {
-        marginTop: 4,
+        marginTop: 7,
         marginLeft: 4,
         fontFamily: 'sukumvit-semibold',
         fontSize: 16,

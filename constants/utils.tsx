@@ -154,7 +154,7 @@ interface PoppularTagProps {
     tagTitle: string
 }
 
-export const popularTag : PoppularTagProps[] = [
+export const popularTag: PoppularTagProps[] = [
     { tagTitle: 'เติ้ล ธนพล' },
     { tagTitle: 'นักแสดงช่อง 7' },
     { tagTitle: 'เข้ม หัสวีร์' },
@@ -213,7 +213,7 @@ export const dramaCH7 = [
         image: require('../assets/images/dramaCH7/03.jpg'),
         link: 'https://www.bugaboo.tv/th/drama/the-river-chis-protector/'
     },
- 
+
     {
         title: 'ไม่สิ้นไร้ไฟสวาท',
         tag: 'ดราม่า',
@@ -250,4 +250,452 @@ export const dramaCH7 = [
         image: require('../assets/images/dramaCH7/09.jpg'),
         link: 'https://www.bugaboo.tv/th/drama/the-braves-the-loves-the-country-the-spirit-of-the-ruler/'
     },
-] 
+];
+
+
+export const dramaCategory = [
+    {
+        title: 'เงากามเทพ',
+        tag: 'โรแมนติก',
+        image: require('../assets/images/dramaCategory/01.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/theyoungandtheruthless/'
+    },
+    {
+        title: 'ผีเสื้อสลับลาย',
+        tag: 'ดรามา',
+        image: require('../assets/images/dramaCategory/02.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/stolenwings/'
+    },
+
+    {
+        title: 'เล่ห์มยุรา',
+        tag: 'โรแมนติก',
+        image: require('../assets/images/dramaCategory/03.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/loveandscandel/'
+    },
+    {
+        title: 'เล่ห์ร้ายเกมลวง',
+        tag: 'โรแมนติก',
+        image: require('../assets/images/dramaCategory/04.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/thedeceptiongame/'
+    },
+    {
+        title: 'ไฟน้ำค้าง',
+        tag: 'โรแมนติก',
+        image: require('../assets/images/dramaCategory/05.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/gameoflove/'
+    },
+    {
+        title: 'รอยรักรอยบาป',
+        tag: 'ดรามา',
+        image: require('../assets/images/dramaCategory/06.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/royrakroybap/'
+    },
+    {
+        title: 'ฟ้าหินดินทราย',
+        tag: 'ดรามา',
+        image: require('../assets/images/dramaCategory/07.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/fah-hin-din-sai/'
+    },
+    {
+        title: 'ลูกไม้ลายสนธยา',
+        tag: 'ดรามา',
+        image: require('../assets/images/dramaCategory/08.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/look-mai-lai-son-tha-ya/'
+    },
+    {
+        title: 'ร้ายเดียงสา',
+        tag: 'ดรามา',
+        image: require('../assets/images/dramaCategory/09.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/rai-dieng-sa/'
+    },
+    {
+        title: 'ชะชะช่า ท้ารัก',
+        tag: 'ละครเพลง',
+        image: require('../assets/images/dramaCategory/10.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/chachacha-tha-rak/'
+    },
+]
+
+
+export const actionCategory = [
+    {
+        title: 'เปิดโหมดล่า อย่าท้าทายระบบ',
+        tag: 'แอกชัน',
+        image: require('../assets/images/actionCategory/01.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/poetmodla/'
+    },
+    {
+        title: 'โอม! พระยาไฟ',
+        tag: 'แอกชัน',
+        image: require('../assets/images/actionCategory/02.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/oam-pra-ya-fire-incantation/'
+    },
+    {
+        title: 'พระจันทร์ลายพยัคฆ์',
+        tag: 'แอกชัน',
+        image: require('../assets/images/actionCategory/03.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/pra-chan-lai-pa-yak/'
+    },
+    {
+        title: 'อินทรีแดง',
+        tag: 'แอกชัน',
+        image: require('../assets/images/actionCategory/04.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/the-red-mask/'
+    },
+    {
+        title: 'สมิงจ้าวท่า',
+        tag: 'แอกชัน',
+        image: require('../assets/images/actionCategory/05.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/saming-chao-tha/'
+    },
+    {
+        title: 'เสือสั่งฟ้า',
+        tag: 'แอกชัน',
+        image: require('../assets/images/actionCategory/06.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/suea-sang-fah-legend-of-the-tiger/'
+    },
+    {
+        title: 'จ้าวสมิง',
+        tag: 'แอกชัน',
+        image: require('../assets/images/actionCategory/07.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/jao-sa-ming/'
+    },
+    {
+        title: 'เหล็กไหล',
+        tag: 'แอกชัน',
+        image: require('../assets/images/actionCategory/08.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/lek-lai/'
+    },
+    {
+        title: 'พ่อตามือปราบเฮี้ยน',
+        tag: 'แอกชัน',
+        image: require('../assets/images/actionCategory/09.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/por-ta-mue-prap-hean/'
+    },
+    {
+        title: 'มือเหนือเมฆ',
+        tag: 'แอกชัน',
+        image: require('../assets/images/actionCategory/10.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/mue-nuea-mek-the-last-legend/'
+    },
+]
+export const shortSeriesCategory = [
+    {
+        title: '21 วันของฉันกับเธอ',
+        tag: 'แอกชัน',
+        image: require('../assets/images/shortSeriesCategory/01.jpg'),
+        link: 'https://www.bugaboo.tv/shortseries-watch/21_Days_Sunshine/ep1'
+    },
+    {
+        title: 'ฟื้นคืนจากเถ้าถ่าน',
+        tag: 'แอกชัน',
+        image: require('../assets/images/shortSeriesCategory/02.jpg'),
+        link: 'https://www.bugaboo.tv/shortseries-watch/Nirvana/ep1'
+    },
+    {
+        title: 'ลิขิตรักแพทย์หญิง ดวงใจฝ่าบาท',
+        tag: 'แอกชัน',
+        image: require('../assets/images/shortSeriesCategory/03.jpg'),
+        link: 'https://www.bugaboo.tv/shortseries-watch/Love_At_First_Sight_Doctor/ep1'
+    },
+    {
+        title: 'ทายาทรักของประธานลู่',
+        tag: 'แอกชัน',
+        image: require('../assets/images/shortSeriesCategory/04.jpg'),
+        link: 'https://www.bugaboo.tv/shortseries-watch/Pregnant_With_Your_Little_Ancestor/ep1'
+    },
+    {
+        title: 'เจ้าหญิงลั่วหยาง',
+        tag: 'แอกชัน',
+        image: require('../assets/images/shortSeriesCategory/05.jpg'),
+        link: 'https://www.bugaboo.tv/shortseries-watch/Princess_Luoyang/ep1'
+    },
+    {
+        title: 'แผนรักลวงใจ',
+        tag: 'แอกชัน',
+        image: require('../assets/images/shortSeriesCategory/06.jpg'),
+        link: 'https://www.bugaboo.tv/shortseries-watch/Hidden_Marriage/ep1'
+    },
+    {
+        title: 'ทายาทเศรษฐี ผู้ส่งของ',
+        tag: 'แอกชัน',
+        image: require('../assets/images/shortSeriesCategory/07.jpg'),
+        link: 'https://www.bugaboo.tv/shortseries-watch/Billionaire_Heiress_Delivers_Food/ep1'
+    },
+    {
+        title: 'มหากาพย์มังกรสวรรค์',
+        tag: 'แอกชัน',
+        image: require('../assets/images/shortSeriesCategory/08.jpg'),
+        link: 'https://www.bugaboo.tv/shortseries-watch/Eight_Heavenly_Dragons/ep1'
+    },
+    {
+        title: 'หวนคืนรักเก่า เมื่อเราพบกันใหม่',
+        tag: 'แอกชัน',
+        image: require('../assets/images/shortSeriesCategory/09.jpg'),
+        link: 'https://www.bugaboo.tv/shortseries-watch/Meeting_You_Again/ep1'
+    },
+
+]
+export const originalCategory = [
+    {
+        title: 'ติดลมบน',
+        image: require('../assets/images/originalCategory/01.jpg'),
+        link: 'https://www.bugaboo.tv/th/originals/tidlombon/',
+        logo: require('../assets/svg/logoWhite/logCh7.png'),
+        titleLogo: 'Ch7HD'
+    },
+    {
+        title: 'เสียงจากหลุม',
+        image: require('../assets/images/originalCategory/02.jpg'),
+        link: 'https://www.bugaboo.tv/th/originals/siangchaklum/',
+        logo: require('../assets/svg/logoWhite/logCh7.png'),
+        titleLogo: 'Ch7HD'
+    },
+    {
+        title: 'ดวงใจ STORY',
+        image: require('../assets/images/originalCategory/03.jpg'),
+        link: 'https://www.bugaboo.tv/th/originals/duangjaistory/',
+        logo: require('../assets/svg/logoWhite/logCh7.png'),
+        titleLogo: 'Ch7HD'
+    },
+    {
+        title: 'Star Cam',
+        image: require('../assets/images/originalCategory/04.jpg'),
+        link: 'https://www.bugaboo.tv/th/originals/starcam/',
+        logo: require('../assets/svg/logoWhite/logCh7.png'),
+        titleLogo: 'Ch7HD'
+    },
+    {
+        title: 'TALK TO U',
+        image: require('../assets/images/originalCategory/05.jpg'),
+        link: 'https://www.bugaboo.tv/th/originals/talktou/',
+        logo: require('../assets/svg/logoWhite/logCh7.png'),
+        titleLogo: 'Ch7HD'
+    },
+    {
+        title: 'อร่อยต้องแชร์',
+        image: require('../assets/images/originalCategory/06.jpg'),
+        link: 'https://www.bugaboo.tv/th/originals/aroitongshare/',
+        logo: require('../assets/svg/logoWhite/bugabooTV.png'),
+        titleLogo: 'BUGABOO.TV'
+    },
+
+    {
+        title: 'หลงละคร',
+        image: require('../assets/images/originalCategory/07.jpg'),
+        link: 'https://www.bugaboo.tv/th/originals/hlnglakhr/',
+        logo: require('../assets/svg/logoWhite/logCh7.png'),
+        titleLogo: 'Ch7HD'
+    },
+    {
+        title: 'ปาเตี้ยว',
+        image: require('../assets/images/originalCategory/08.jpg'),
+        link: 'https://www.bugaboo.tv/th/originals/paetiyw/',
+        logo: require('../assets/svg/logoWhite/logCh7.png'),
+        titleLogo: 'Ch7HD'
+    },
+    {
+        title: '24/7 ไดอารีคนข่าว',
+        image: require('../assets/images/originalCategory/09.jpg'),
+        link: 'https://www.bugaboo.tv/th/originals/247diarykonkhao/',
+        logo: require('../assets/svg/logoWhite/logCh7.png'),
+        titleLogo: 'Ch7HD'
+    },
+
+]
+
+export const originalNewContent = [
+    {
+        title: 'EP.26 ที่สุดของความสด ธรรมชาติซีฟู้ด ครองตลาดอาหารทะเล ยอดขายทะลุพันล้าน | ติดลมบน มหาชนTalk',
+        date: '3 ก.ย.2568',
+        image: require('../assets/images/originalNewContent/01.jpg'),
+        link: 'https://www.bugaboo.tv/th/originals/tidlombon/1756801578237/'
+    },
+    {
+        title: 'อยากให้เห็น" EP.28 คุณเต้ย ผีเหรียญ | เสียงจากหลุม มหาชนTalk',
+        date: '30 ส.ค. 2568',
+        image: require('../assets/images/originalNewContent/02.jpg'),
+        link: 'https://www.bugaboo.tv/th/originals/siangchaklum/1756365372155/'
+    },
+    {
+        title: 'EP.17 ความ Shine ที่ไม่เคยเปลี่ยน - สน ยุกต์ | TALK TO U',
+        date: '30 ส.ค. 2568',
+        image: require('../assets/images/originalNewContent/03.jpg'),
+        link: 'https://www.bugaboo.tv/th/originals/talktou/1756456949340/'
+    },
+    {
+        title: 'EP.7 เปิดตี้ชวนมาจอย x ดิว ศุภกฤต - บัว บัวบูชา',
+        date: '29 ส.ค. 2568',
+        image: require('../assets/images/originalNewContent/04.jpg'),
+        link: 'https://www.bugaboo.tv/th/originals/entjoyparty/1756461455888/'
+    },
+    {
+        title: 'หาคนหาย ได้คนตาย" EP.27 คุณทองใหม่ | เสียงจากหลุม มหาชนTalk',
+        date: '29 ส.ค. 2568',
+        image: require('../assets/images/originalNewContent/05.jpg'),
+        link: 'https://www.bugaboo.tv/th/originals/siangchaklum/1755663413238/'
+    },
+    {
+        title: 'MISSION 7 x หลุยส์ + ทราย Save World Save Life #คนปรับโลกเปลี่ยน',
+        date: '29 ส.ค. 2568',
+        image: require('../assets/images/originalNewContent/06.jpg'),
+        link: 'https://www.bugaboo.tv/th/originals/mission7/1755755034972/'
+    },
+    {
+        title: 'EP.25 ลดมะเร็ง มีลูกยากกับ BKGI นวัตกรรมตรวจยีน ที่พลิกอนาคตสุขภาพของคนทั่วโลก! | ติดลมบน มหาชนTalk',
+        date: '29 ส.ค. 2568',
+        image: require('../assets/images/originalNewContent/07.jpg'),
+        link: 'https://www.bugaboo.tv/th/originals/tidlombon/1755505503552/'
+    },
+    {
+        title: 'EP.9 "คลาวเดีย จักรพันธุ์ ณ อยุธยา" ความสำเร็จที่แลกมาด้วยความสามารถ | ดวงใจ STORY',
+        date: '29 ส.ค. 2568',
+        image: require('../assets/images/originalNewContent/08.jpg'),
+        link: 'https://www.bugaboo.tv/th/originals/duangjaistory/1755488823061/'
+    },
+    {
+        title: 'ห้องเรียนผี" EP.26 อ.หนอ ศาสตราพยากรณ์ | เสียงจากหลุม มหาชนTalk',
+        date: '16 ส.ค. 2568',
+        image: require('../assets/images/originalNewContent/09.jpg'),
+        link: 'https://www.bugaboo.tv/th/originals/siangchaklum/1755249495950/'
+    },
+    {
+        title: 'EP.16 LOVE & LIFE ในแบบมิว - มิว ศุภศิษฏ์ | TALK TO U',
+        date: '16 ส.ค. 2568',
+        image: require('../assets/images/originalNewContent/10.jpg'),
+        link: 'https://www.bugaboo.tv/th/originals/talktou/1755235759619/'
+    },
+
+]
+
+
+
+export const movieAndSeries = [
+    {
+        title: 'แค่เอื้อม',
+        tag: 'ดรามา',
+        image: require('../assets/images/movieAndSeries/01.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/kae-eaum/'
+    },
+    {
+        title: 'เดชอสูรขันแก้วนพเก้า',
+        tag: 'ดรามา',
+        image: require('../assets/images/movieAndSeries/02.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/dejasoonkwankaewnoppakao/'
+    },
+    {
+        title: 'วอน (เธอ)',
+        tag: 'ดรามา',
+        image: require('../assets/images/movieAndSeries/03.jpg'),
+        link: 'https://www.bugaboo.tv/th/movie/68136/'
+    },
+    {
+        title: 'นักฆ่าขนตางอน',
+        tag: 'แอกชัน',
+        image: require('../assets/images/movieAndSeries/04.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/nak-kha-kon-ta-ngaon/'
+    },
+
+    {
+        title: 'ฟ้าหินดินทราย 2550',
+        tag: 'ดรามา',
+        image: require('../assets/images/movieAndSeries/05.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/fah-hin-din-sai-2007/'
+    },
+    {
+        title: 'แฝดล่องหน 2544',
+        tag: 'ดรามา',
+        image: require('../assets/images/movieAndSeries/06.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/fad-long-hon/'
+    },
+    {
+        title: 'เงากามเทพ',
+        tag: 'โรแมนติก',
+        image: require('../assets/images/movieAndSeries/07.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/theyoungandtheruthless/'
+    },
+    {
+        title: 'ดั่งสายน้ำไหล',
+        tag: 'โรแมนติก',
+        image: require('../assets/images/movieAndSeries/08.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/dang-sai-nam-lai/'
+    },
+    {
+        title: 'เล็กใหญ่ไม่เกี่ยว…ขอเอี่ยวด้วยคน',
+        tag: 'แอกชัน',
+        image: require('../assets/images/movieAndSeries/09.jpg'),
+        link: 'https://www.bugaboo.tv/th/drama/lek-yai-mai-kaewko-aew-duay-kon/'
+    },
+    {
+        title: 'โอ้! มายโกสต์ คุณผีช่วย',
+        tag: 'คอมเมดี้',
+        image: require('../assets/images/movieAndSeries/10.jpg'),
+        link: 'https://www.bugaboo.tv/th/movie/66659/'
+    },
+
+]
+
+export const sportCategory = [
+    {
+        title: 'วอลเลย์บอล นักเรียนหญิง',
+        tag: 'กีฬา',
+        image: require('../assets/images/sportCategory/01.jpg'),
+        link: 'https://www.bugaboo.tv/th/variety/volleyballchamp7hd2025/'
+    },
+    {
+        title: 'บาสเกตบอล 3X3 นักเรียนชาย',
+        tag: 'กีฬา',
+        image: require('../assets/images/sportCategory/02.jpg'),
+        link: 'https://www.bugaboo.tv/th/variety/bas3x3champ7hd2025/'
+    },
+    {
+        title: 'มวยไทย 7 สี',
+        tag: 'กีฬา',
+        image: require('../assets/images/sportCategory/03.jpg'),
+        link: 'https://www.bugaboo.tv/th/variety/muaythai7see/'
+    },
+    {
+        title: 'ONE FIGHT NIGHT',
+        tag: 'กีฬา',
+        image: require('../assets/images/sportCategory/04.jpg'),
+        link: 'https://www.bugaboo.tv/th/variety/onelumpinee/'
+    },
+    {
+        title: 'ONE ลุมพินี',
+        tag: 'กีฬา',
+        image: require('../assets/images/sportCategory/05.png'),
+        link: 'https://www.bugaboo.tv/th/variety/onelumpinee/'
+    },
+    {
+        title: 'ฟุตบอลแชมป์ แชมเปียน คัพ',
+        tag: 'กีฬา',
+        image: require('../assets/images/sportCategory/06.jpg'),
+        link: 'https://www.bugaboo.tv/th/variety/futblaechmp-7hd-aechmepiyn-khaph-2024/'
+    },
+    {
+        title: 'สปอร์ตแฟน',
+        tag: 'กีฬา',
+        image: require('../assets/images/sportCategory/07.jpg'),
+        link: 'https://www.bugaboo.tv/th/variety/sportfan/'
+    },
+    {
+        title: 'มวยเด็ด วิกหมอชิต',
+        tag: 'กีฬา',
+        image: require('../assets/images/sportCategory/08.jpg'),
+        link: 'https://www.bugaboo.tv/th/variety/muayded-vicmorchit/'
+    },
+    {
+        title: 'เซียนสปอร์ต',
+        tag: 'กีฬา',
+        image: require('../assets/images/sportCategory/09.jpg'),
+        link: 'https://www.bugaboo.tv/th/variety/siansports/'
+    },
+    {
+        title: 'ONE LUMPINEE SPECIAL',
+        tag: 'กีฬา',
+        image: require('../assets/images/sportCategory/10.jpg'),
+        link: 'https://www.bugaboo.tv/th/variety/one-lumpinee-special/'
+    },
+]
+

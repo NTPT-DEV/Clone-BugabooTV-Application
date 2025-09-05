@@ -1,11 +1,12 @@
 
 import BannerHorizontal from '@/components/BannerHorizontal';
 import BannerVertical from '@/components/BannerVertical';
+import BannerVerticalOriginal from '@/components/BannerVerticalOriginal';
 import MenuIcon from '@/components/MenuIcon';
 import NameSection from '@/components/NameSection';
 import SugestForYou from '@/components/SugestForYou';
 import TopTenCard from '@/components/TopTenCard';
-import { colors, dramaCH7, highLight, iconLists, imageCategory, newContent, popularTag, topTenToday } from '@/constants/utils';
+import { actionCategory, colors, dramaCategory, dramaCH7, highLight, iconLists, imageCategory, movieAndSeries, newContent, originalCategory, originalNewContent, popularTag, shortSeriesCategory, sportCategory, topTenToday } from '@/constants/utils';
 import { LinearGradient } from 'expo-linear-gradient';
 import { StatusBar } from 'expo-status-bar';
 import { useVideoPlayer, VideoView } from 'expo-video';
@@ -60,7 +61,9 @@ const HomeScreen = () => {
                     </LinearGradient>
                 </View>
             </View>
-            <ScrollView style={styles.rootContainer}>
+            <ScrollView
+                contentContainerStyle={{ paddingBottom: 100 }}
+                style={styles.rootContainer}>
                 <StatusBar hidden={true} />
 
                 <View style={styles.container}>
@@ -89,15 +92,22 @@ const HomeScreen = () => {
                                 }}
                                 source={require('../../assets/images/logos/ch7-logo.png')} />
                         </LinearGradient>
-                        <Image
-                            style={{
-                                borderRadius: 8,
-                                width: 120,
-                                height: 65,
-                                resizeMode: 'cover',
+                        <View style={{
+                            borderRadius: 8,
+                            width: 120,
+                            height: 65,
+                            elevation : 3
+                        }}>
+                            <Image
+                                style={{
+                                    borderRadius: 8,
+                                    width: 120,
+                                    height: 65,
+                                    resizeMode: 'cover',
 
-                            }}
-                            source={require('../../assets/images/logos/hot-news.png')} />
+                                }}
+                                source={require('../../assets/images/logos/hot-news.png')} />
+                        </View>
                     </View>
                 </View>
                 <View style={{
@@ -388,13 +398,14 @@ const HomeScreen = () => {
                             fontFamily: 'sukumvit-bold',
                             fontSize: 18,
                             marginLeft: 5,
+                            marginBottom: 5
                         }}
                     >
                         เนื้อหามาใหม่
                     </Text>
+                    <BannerHorizontal data={newContent} />
                 </View>
 
-                <BannerHorizontal data={newContent} />
 
                 {/* Drama Ch7 Section */}
                 <View
@@ -457,7 +468,7 @@ const HomeScreen = () => {
                         style={{ paddingTop: 15 }}
                         showsHorizontalScrollIndicator={false}
                         horizontal={true}
-                        data={dramaCH7}
+                        data={dramaCategory}
                         renderItem={({ item, index }) => {
                             return (
                                 <BannerVertical
@@ -483,12 +494,201 @@ const HomeScreen = () => {
                     padding: 10,
                     marginTop: 10,
                 }}>
-                    <NameSection title={'ดรามาน้ำตาคลอ'} linkColor={colors.darkPurple2} link={'https://www.bugaboo.tv/th/drama/all/drama-promote-teary/'} />
+                    <NameSection title={'แอกชัน'} linkColor={colors.darkPurple2} link={'https://www.bugaboo.tv/th/drama/all/drama-promote-action/'} />
                     <FlatList
                         style={{ paddingTop: 15 }}
                         showsHorizontalScrollIndicator={false}
                         horizontal={true}
-                        data={dramaCH7}
+                        data={actionCategory}
+                        renderItem={({ item, index }) => {
+                            return (
+                                <BannerVertical
+                                    title={item.title}
+                                    tag={item.tag}
+                                    image={item.image}
+                                    link={item.link}
+                                    index={index}
+                                    titleColor={colors.darkGray}
+                                    tagTitleColor={colors.purple}
+                                />
+                            )
+                        }}
+                        keyExtractor={(item, index) => item.title + index.toString()}
+                    />
+                </View>
+
+                {/* Short Series Section */}
+
+                <View
+                    style={{
+                        flex: 1,
+                        height: 460,
+                        backgroundColor: colors.darkPurple3,
+                        position: 'relative',
+                        overflow: 'hidden',
+                        paddingTop: 10,
+                        padding: 10
+                    }}
+                >
+                    <Image
+                        source={require('../../assets/images/imageBackground/bg01.jpg')}
+                        blurRadius={2}
+                        style={{
+                            ...StyleSheet.absoluteFillObject,
+                            position: 'absolute',
+                            left: -450,
+                            resizeMode: 'cover',
+                            opacity: 0.2,
+                            zIndex: 0,
+                        }}
+                    />
+                    <NameSection title={'Short Series'} titleColor={'white'} link={'https://www.bugaboo.tv/th/shortseries/'} />
+                    <FlatList
+                        style={{ paddingTop: 20 }}
+                        showsHorizontalScrollIndicator={false}
+                        horizontal={true}
+                        data={shortSeriesCategory}
+                        renderItem={({ item, index }) => {
+                            return (
+                                <BannerVertical
+                                    title={item.title}
+                                    tag={item.tag}
+                                    image={item.image}
+                                    link={item.link}
+                                    index={index}
+                                    titleColor={'white'}
+                                    tagTitleColor={'white'}
+
+                                />
+                            )
+                        }}
+                        keyExtractor={(item, index) => item.title + index.toString()}
+                    />
+
+                </View>
+
+                {/* Original Section */}
+                <View
+                    style={{
+                        flex: 1,
+                        height: 460,
+                        backgroundColor: colors.darkPurple3,
+                        position: 'relative',
+                        overflow: 'hidden',
+                        paddingTop: 10,
+                        padding: 10
+                    }}
+                >
+                    <Image
+                        source={require('../../assets/images/imageBackground/bg01.jpg')}
+                        blurRadius={2}
+                        style={{
+                            ...StyleSheet.absoluteFillObject,
+                            position: 'absolute',
+                            left: -450,
+                            resizeMode: 'cover',
+                            opacity: 0.2,
+                            zIndex: 0,
+                        }}
+                    />
+                    <NameSection title={'ORIGINALS'} titleColor={'white'} link={'https://www.bugaboo.tv/th/originals/'} />
+                    <FlatList
+                        style={{ paddingTop: 20 }}
+                        showsHorizontalScrollIndicator={false}
+                        horizontal={true}
+                        data={originalCategory}
+                        renderItem={({ item, index }) => {
+                            return (
+                                <BannerVerticalOriginal
+                                    title={item.title}
+                                    image={item.image}
+                                    link={item.link}
+                                    index={index}
+                                    titleColor={'white'}
+                                    logo={item.logo}
+                                    titleLogo={item.titleLogo}
+                                    borderColor={colors.purple}
+                                    titleLogoColor='white'
+                                />
+                            )
+                        }}
+                        keyExtractor={(item, index) => item.title + index.toString()}
+                    />
+
+                </View>
+
+
+                {/* Short Series Section */}
+                <View
+                    style={{
+                        height: 320,
+                        backgroundColor: colors.darkPurple3,
+                        position: 'relative',
+                        overflow: 'hidden',
+                        paddingTop: 10,
+                        padding: 10,
+                        gap: 10
+                    }}
+                >
+                    <Image
+                        source={require('../../assets/images/imageBackground/bg01.jpg')}
+                        blurRadius={2}
+                        style={{
+                            ...StyleSheet.absoluteFillObject,
+                            position: 'absolute',
+                            left: -450,
+                            resizeMode: 'cover',
+                            opacity: 0.2,
+                            zIndex: 0,
+                        }}
+                    />
+                    <NameSection title={'ORIGINALS มาใหม่'} titleColor={'white'} link={'https://www.bugaboo.tv/th/drama/'} />
+                    <BannerHorizontal data={originalNewContent} colorTitle='white' />
+                </View>
+
+                {/* Movies and Series */}
+
+                <View style={{
+                    flex: 1,
+                    padding: 10,
+                    marginTop: 10,
+                }}>
+                    <NameSection title={'หนังและซีรีส์'} linkColor={colors.darkPurple2} link={'https://www.bugaboo.tv/th/movies-series/'} />
+                    <FlatList
+                        style={{ paddingTop: 15 }}
+                        showsHorizontalScrollIndicator={false}
+                        horizontal={true}
+                        data={movieAndSeries}
+                        renderItem={({ item, index }) => {
+                            return (
+                                <BannerVertical
+                                    title={item.title}
+                                    tag={item.tag}
+                                    image={item.image}
+                                    link={item.link}
+                                    index={index}
+                                    titleColor={colors.darkGray}
+                                    tagTitleColor={colors.purple}
+                                />
+                            )
+                        }}
+                        keyExtractor={(item, index) => item.title + index.toString()}
+                    />
+                </View>
+
+                {/* รายการกีฬา */}
+
+                <View style={{
+                    flex: 1,
+                    padding: 10,
+                    marginTop: 10,
+                }}>
+                    <NameSection title={'รายการกีฬา'} linkColor={colors.darkPurple2} link={'https://www.bugaboo.tv/th/variety/all/variety-promote-sportsshows/'} />
+                    <FlatList
+                        style={{ paddingTop: 15 }}
+                        showsHorizontalScrollIndicator={false}
+                        horizontal={true}
+                        data={sportCategory}
                         renderItem={({ item, index }) => {
                             return (
                                 <BannerVertical
@@ -507,131 +707,6 @@ const HomeScreen = () => {
                 </View>
 
 
-                {/* Short Series Section */}
-                <View
-                    style={{
-                        flex: 1,
-                        height: 460,
-                        backgroundColor: colors.darkPurple3,
-                        position: 'relative',
-                        overflow: 'hidden',
-                        paddingTop: 10,
-                        padding: 10
-                    }}
-                >
-                    <Image
-                        source={require('../../assets/images/imageBackground/bg01.jpg')}
-                        blurRadius={2}
-                        style={{
-                            ...StyleSheet.absoluteFillObject,
-                            position: 'absolute',
-                            left: -450,
-                            resizeMode: 'cover',
-                            opacity: 0.2,
-                            zIndex: 0,
-                        }}
-                    />
-                    <NameSection title={'Short Series'} titleColor={'white'} link={'https://www.bugaboo.tv/th/drama/'} />
-                    <FlatList
-                        style={{ paddingTop: 20 }}
-                        showsHorizontalScrollIndicator={false}
-                        horizontal={true}
-                        data={dramaCH7}
-                        renderItem={({ item, index }) => {
-                            return (
-                                <BannerVertical
-                                    title={item.title}
-                                    tag={item.tag}
-                                    image={item.image}
-                                    link={item.link}
-                                    index={index}
-                                    titleColor={'white'}
-                                    tagTitleColor={'white'}
-
-                                />
-                            )
-                        }}
-                        keyExtractor={(item, index) => item.title + index.toString()}
-                    />
-
-                </View>
-                {/* Short Series Section */}
-                <View
-                    style={{
-                        flex: 1,
-                        height: 460,
-                        backgroundColor: colors.darkPurple3,
-                        position: 'relative',
-                        overflow: 'hidden',
-                        paddingTop: 10,
-                        padding: 10
-                    }}
-                >
-                    <Image
-                        source={require('../../assets/images/imageBackground/bg01.jpg')}
-                        blurRadius={2}
-                        style={{
-                            ...StyleSheet.absoluteFillObject,
-                            position: 'absolute',
-                            left: -450,
-                            resizeMode: 'cover',
-                            opacity: 0.2,
-                            zIndex: 0,
-                        }}
-                    />
-                    <NameSection title={'ORIGINALS'} titleColor={'white'} link={'https://www.bugaboo.tv/th/drama/'} />
-                    <FlatList
-                        style={{ paddingTop: 20 }}
-                        showsHorizontalScrollIndicator={false}
-                        horizontal={true}
-                        data={dramaCH7}
-                        renderItem={({ item, index }) => {
-                            return (
-                                <BannerVertical
-                                    title={item.title}
-                                    tag={item.tag}
-                                    image={item.image}
-                                    link={item.link}
-                                    index={index}
-                                    titleColor={'white'}
-                                    tagTitleColor={'white'}
-                                />
-                            )
-                        }}
-                        keyExtractor={(item, index) => item.title + index.toString()}
-                    />
-
-                </View>
-
-
-                {/* Short Series Section */}
-                <View
-                    style={{
-                        height: 400 ,
-                        backgroundColor: colors.darkPurple3,
-                        position: 'relative',
-                        overflow: 'hidden',
-                        paddingTop: 10,
-                        padding: 10 , 
-                        gap : 10 
-                    }}
-                >
-                    <Image
-                        source={require('../../assets/images/imageBackground/bg01.jpg')}
-                        blurRadius={2}
-                        style={{
-                            ...StyleSheet.absoluteFillObject,
-                            position: 'absolute',
-                            left: -450,
-                            resizeMode: 'cover',
-                            opacity: 0.2,
-                            zIndex: 0,
-                        }}
-                    />
-                    <NameSection title={'ORIGINALS มาใหม่'} titleColor={'white'} link={'https://www.bugaboo.tv/th/drama/'} />
-                    <BannerHorizontal data={newContent} colorTitle='white' />
-                </View>
-
             </ScrollView>
         </>
     )
@@ -641,11 +716,12 @@ const styles = StyleSheet.create({
     rootContainer: {
         flex: 1,
         backgroundColor: '#fff',
-        paddingTop : 90,
-        
+        paddingTop: 90,
+
     },
     container: {
         backgroundColor: '#fff',
+
     },
     navBar: {
         flexDirection: 'row',
