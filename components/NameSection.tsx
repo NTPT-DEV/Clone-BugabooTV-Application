@@ -1,49 +1,81 @@
 import { colors } from '@/constants/utils'
 import { ArrowRight } from 'lucide-react-native'
-import { Linking, Pressable, Text, View } from 'react-native'
+import { Dimensions, Linking, Pressable, Text, View } from 'react-native'
 
 interface Props {
     title: string
-    titleColor? : string
-    link : string
-    linkColor ? : string
+    titleColor?: string
+    link: string
+    linkColor?: string
+    nameLive?: string
+    postion? :string
 }
-const NameSection = ({title , titleColor = 'black' , link , linkColor = colors.lightPurple2 } : Props) => {
+
+const widthScreen = Dimensions.get('window').width;
+const NameSection = ({ title, titleColor = 'black', link, linkColor = colors.lightPurple2, nameLive }: Props) => {
+    
     return (
-        <View
-            style={{
-                marginHorizontal: 5,
-                zIndex: 1,
-            }}
-        >
+
+        <View style={{
+            width: widthScreen,
+            justifyContent: 'center',
+            alignItems: 'center' , 
+            marginVertical : 5
+        }}>
             <View style={{
-                width: '100%',
-                height : 40,
+                width: widthScreen ,
                 flexDirection: 'row',
-                gap: 20,
+                gap: nameLive ? 20  : 0 ,
                 alignItems: 'center',
+                justifyContent: 'space-between',
+                paddingHorizontal : 15 ,
+              
             }}>
-                <Text
-                    style={{
-                        fontSize: 20,
-                        color: `${titleColor}`,
-                        fontFamily: 'sukumvit-bold',
+                {nameLive ? (
+                    <View>
+                        <Text
+                            style={{
+                                fontSize: 20,
+                                color: `${titleColor}`,
+                                fontFamily: 'sukumvit-bold',
+                            }}
+                        >
+                            {title}
+                        </Text>
+                        <Text
+                            style={{
+                                fontSize: 16,
+                                color: `${titleColor}`,
+                                fontFamily: 'sukumvit-semibold',
+                            }}
+                        >
+                            {nameLive}
+                        </Text>
+                    </View>
+                ) : (
+                    <Text
+                        style={{
+                            fontSize: 20,
+                            color: `${titleColor}`,
+                            fontFamily: 'sukumvit-bold',
+                        }}
+                    >
+                        {title}
+                    </Text>
+                )}
+                <Pressable
+                    onPress={() => {
+                        Linking.openURL(link)
                     }}
                 >
-                    {title}
-                </Text>
-                <Pressable
-                onPress={()=> {
-                    Linking.openURL(link)
-                }}
-                >
                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                    <Text style={{ color: linkColor, fontFamily: 'sukumvit-semibold' }}>ดูทั้งหมด </Text>
-                    <ArrowRight size={18} color={linkColor} />
-                </View>
+                        <Text style={{ color: linkColor, fontFamily: 'sukumvit-semibold' }}>ดูทั้งหมด </Text>
+                        <ArrowRight size={18} color={linkColor} />
+                    </View>
                 </Pressable>
             </View>
         </View>
+
     )
 }
 export default NameSection

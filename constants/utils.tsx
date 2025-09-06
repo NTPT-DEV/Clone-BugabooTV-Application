@@ -4,6 +4,8 @@ import { Clapperboard, Crown, Film, Plane, Search, ShoppingBag, Volleyball } fro
 
 
 export const colors = {
+    black : '#000',
+    white : '#fff' ,
     purple: '#823DFF',
     lightPurple: '#EAE9FF',
     lightPurple2: '#c5a5ffff',
@@ -766,7 +768,7 @@ export const lastNews = [
 ]
 
 
-export const popularTag2  = [
+export const popularTag2 : PoppularTagProps[] = [
     { tagTitle: 'เส้นทางบันเทิง 31 ธันวาคม 2564' },
     { tagTitle: 'ตัวอย่างหนัง Bride Hard อึดนรกแต่ง' },
     { tagTitle: 'มงคลเมเจอร์' },

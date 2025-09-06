@@ -6,7 +6,7 @@ interface IconListProps {
     icon: React.ReactNode;
     link: string;
 }
-const MenuIcon = ({ title, icon, link }: IconListProps) => {
+const MenuIconList = ({ title, icon, link }: IconListProps) => {
 
     return (
         <Pressable
@@ -22,18 +22,19 @@ const MenuIcon = ({ title, icon, link }: IconListProps) => {
         </Pressable>
     )
 }
-export default MenuIcon
+export default MenuIconList
 
 const styles = StyleSheet.create({
     container: {
         borderRadius: 100,
-        width: 70,
-        height: 70,
+        width: 65,
+        height: 65,
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#000'
     },
     title: {
+        fontSize : 12 ,
         marginTop: 4,
         textAlign: 'center',
         flexWrap: 'wrap',
