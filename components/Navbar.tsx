@@ -2,9 +2,9 @@ import { colors } from '@/constants/utils';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Crown, Menu, Store } from 'lucide-react-native';
 import { useState } from 'react';
-import { Pressable, StyleSheet, View } from 'react-native';
+import { Linking, Pressable, StyleSheet, View } from 'react-native';
 import BagabooTVLogo from '../assets/svg/bugaboo-tv.svg';
-import HelpIcon from '../assets/svg/helpIcon.svg';
+import HelpIconMenu from './HelpIconMenu';
 import MenuModal from './MenuModal';
 
 
@@ -30,31 +30,38 @@ const Navbar = () => {
                     <BagabooTVLogo width={130} height={130} />
                 </View>
                 <View style={styles.containerRightIcon}>
-                    <LinearGradient
-                        start={{ x: 0, y: 0 }} end={{ x: 0.8, y: 0 }}
-                        colors={[colors.darkPurple2, colors.lightBlue]}
-                        style={styles.gradientBorder}
+
+                    <HelpIconMenu />
+
+                    <Pressable
+                        onPress={() => {
+                            Linking.openURL('https://shop.bugaboo.tv/')
+                        }}
                     >
-                        <View style={styles.innerBox}>
-                            <HelpIcon width={28} height={28} />
-                        </View>
-                    </LinearGradient>
-                    <LinearGradient
-                        start={{ x: 0, y: 0 }} end={{ x: 0.8, y: 0 }}
-                        colors={[colors.darkPurple2, colors.lightBlue]}
-                        style={styles.gradientBorder}
+                        <LinearGradient
+                            start={{ x: 0, y: 0 }} end={{ x: 0.8, y: 0 }}
+                            colors={[colors.darkPurple2, colors.lightBlue]}
+                            style={styles.gradientBorder}
+                        >
+                            <View style={styles.innerBox}>
+                                <Store color={colors.darkPurple2} width={20} height={20} />
+                            </View>
+                        </LinearGradient>
+                    </Pressable>
+
+                    <Pressable
+                        onPress={() => {
+                            Linking.openURL('https://www.bugaboo.tv/th/subscription-plan/')
+                        }}
                     >
-                        <View style={styles.innerBox}>
-                            <Store color={colors.darkPurple2} width={20} height={20} />
-                        </View>
-                    </LinearGradient>
-                    <LinearGradient
-                        start={{ x: 0, y: 0 }} end={{ x: 0.8, y: 0 }}
-                        colors={[colors.darkPurple2, colors.lightBlue]}
-                        style={[styles.gradientBorder,
-                        { justifyContent: 'center', alignItems: 'center', width: 33, height: 33 }]}>
-                        <Crown fill={'white'} color={'white'} width={15} height={15} />
-                    </LinearGradient>
+                        <LinearGradient
+                            start={{ x: 0, y: 0 }} end={{ x: 0.8, y: 0 }}
+                            colors={[colors.darkPurple2, colors.lightBlue]}
+                            style={[styles.gradientBorder,
+                            { justifyContent: 'center', alignItems: 'center', width: 33, height: 33 }]}>
+                            <Crown fill={'white'} color={'white'} width={15} height={15} />
+                        </LinearGradient>
+                    </Pressable>
                 </View>
                 <MenuModal openMenu={openMenu} closeModal={closeModal} />
             </View>
