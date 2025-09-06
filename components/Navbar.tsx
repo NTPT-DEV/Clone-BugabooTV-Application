@@ -13,11 +13,10 @@ const Navbar = () => {
 
     const openModal = () => {
         setOpenMenu(openMenu => !openMenu);
-        console.log("Opening modal");
     }
     const closeModal = () => {
         setOpenMenu(false);
-        console.log("Closing modal");
+      
     }
 
     return (
