@@ -12,7 +12,8 @@ interface Props {
 }
 
 const widthScreen = Dimensions.get('window').width;
-const NameSection = ({ title, titleColor = 'black', link, linkColor = colors.lightPurple2, nameLive }: Props) => {
+
+const NameDarkSection = ({ title, titleColor = 'black', link, linkColor = colors.lightPurple2, nameLive }: Props) => {
     
     return (
 
@@ -28,7 +29,8 @@ const NameSection = ({ title, titleColor = 'black', link, linkColor = colors.lig
                 gap: nameLive ? 20  : 0 ,
                 alignItems: 'center',
                 justifyContent: 'space-between',
-                paddingHorizontal : 15
+                paddingRight : 25,
+                paddingLeft : 5 
               
             }}>
                 {nameLive ? (
@@ -78,4 +80,4 @@ const NameSection = ({ title, titleColor = 'black', link, linkColor = colors.lig
 
     )
 }
-export default NameSection
+export default NameDarkSection

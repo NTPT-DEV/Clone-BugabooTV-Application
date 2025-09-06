@@ -1,12 +1,23 @@
 import { colors } from '@/constants/utils';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Crown, Menu, Store } from 'lucide-react-native';
+import { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import BagabooTVLogo from '../assets/svg/bugaboo-tv.svg';
 import HelpIcon from '../assets/svg/helpIcon.svg';
+import MenuModal from './MenuModal';
+
+
 const Navbar = () => {
-  return (
-     <View style={styles.navBar}>
+    const [openMenu, setOpenMenu] = useState(false)
+
+    const openModal = () => setOpenMenu(true)
+    const closeModal = () => setOpenMenu(false)
+
+
+    return (
+        <>
+            <View style={styles.navBar}>
                 <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
                     <Menu color={"black"} width={24} height={24} />
                     <BagabooTVLogo width={130} height={130} />
@@ -39,7 +50,9 @@ const Navbar = () => {
                     </LinearGradient>
                 </View>
             </View>
-  )
+            <MenuModal open={openMenu} close={closeModal} />
+        </>
+    )
 }
 export default Navbar
 const styles = StyleSheet.create({

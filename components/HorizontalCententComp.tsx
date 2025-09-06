@@ -1,7 +1,7 @@
 import { colors } from '@/constants/utils'
 import { StyleSheet, View } from 'react-native'
 import BannerHorizontal from './BannerHorizontal'
-import NameSection from './NameSection'
+import NameSectionHorizonComp from './NameSectionHorizonComp'
 
 interface DataProps {
     title: string
@@ -19,7 +19,7 @@ const HorizontalCententComp = ({title ,data} : ComponentProp) => {
 
     return (
         <View style={styles.contentContainer}>
-            <NameSection
+            <NameSectionHorizonComp
                 title={title}
                 linkColor={colors.darkPurple2}
                 link={'https://www.bugaboo.tv/th/news/all/'} />
@@ -30,6 +30,6 @@ const HorizontalCententComp = ({title ,data} : ComponentProp) => {
 export default HorizontalCententComp
 const styles = StyleSheet.create({
     contentContainer: {
-        marginHorizontal: 5
+       
     }
 })

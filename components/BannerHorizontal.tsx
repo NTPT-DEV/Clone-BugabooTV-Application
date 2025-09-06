@@ -11,7 +11,7 @@ const BannerHorizontal = ({ data, colorTitle }: BannerHorizontalProps) => {
   return (
 
     <FlatList
-      style={{ paddingHorizontal: 10 }}
+      style={{marginHorizontal : 10}}
       contentContainerStyle={{}}
       data={data}
       horizontal={true}

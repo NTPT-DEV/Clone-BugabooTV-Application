@@ -838,3 +838,68 @@ export const techCategory = [
     },
 
 ]
+
+
+export const varietyCategory = [
+    {
+        title: 'Picpost Review',
+        image: require('../assets/images/varietyCategory/01.png'),
+        link: 'https://www.bugaboo.tv/th/variety/picpost-review/'
+    },
+    {
+        title: 'ยิ่งคุย ยิ่งลึก',
+        image: require('../assets/images/varietyCategory/02.jpg'),
+        link: 'https://www.bugaboo.tv/th/variety/yingkhuy-yingluek/'
+    },
+    {
+        title: 'ทำดีได้ดี',
+        image: require('../assets/images/varietyCategory/03.jpg'),
+        link: 'https://www.bugaboo.tv/th/variety/Thdeeaiddee/'
+    },
+    {
+        title: 'ละครดี Recap',
+        image: require('../assets/images/varietyCategory/04.jpg'),
+        link: 'https://www.bugaboo.tv/th/variety/lakorndeerecap/'
+    },
+    {
+        title: 'นิวบอย SOI 7',
+        image: require('../assets/images/varietyCategory/05.jpg'),
+        link: 'https://www.bugaboo.tv/th/variety/newboysoi7/'
+    },
+    {
+        title: 'How To Tricks',
+        image: require('../assets/images/varietyCategory/06.jpg'),
+        link: 'https://www.bugaboo.tv/th/variety/how-to-tricks/'
+    },
+    {
+        title: 'มิตรรัก ทั่วไทย',
+        image: require('../assets/images/varietyCategory/07.jpg'),
+        link: 'https://www.bugaboo.tv/th/variety/mitrrakthoathai/'
+    },
+    {
+        title: 'ดวลเพลงดัง Ch7HD',
+        image: require('../assets/images/varietyCategory/08.jpg'),
+        link: 'https://www.bugaboo.tv/th/variety/duanplengdang/'
+    },
+    {
+        title: 'เรื่องเล่าอาจารย์ยอด',
+        image: require('../assets/images/varietyCategory/09.jpg'),
+        link: 'https://www.bugaboo.tv/th/variety/ajarnyord/'
+    },
+ 
+]
+
+export const popularTag3 : PoppularTagProps[] = [
+    { tagTitle: 'เมษายน 2566' },
+    { tagTitle: 'นมัสการ' },
+    { tagTitle: 'ที่เที่ยวโรแมนติก' },
+    { tagTitle: 'เดินป่า' },
+    { tagTitle: 'ที่เที่ยวภาคใต้' },
+    { tagTitle: 'งานสงกรานต์ 2568' },
+    { tagTitle: 'สิงหาคม 2566' },
+    { tagTitle: 'ที่เที่ยวธรรมชาติใกล้กรุง' },
+    { tagTitle: 'ที่เที่ยววาเลนไทน์' },
+
+];
+
+

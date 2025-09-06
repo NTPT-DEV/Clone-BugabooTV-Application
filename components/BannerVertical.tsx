@@ -23,8 +23,8 @@ const BannerVertical = ({ title, image, link, tag, titleColor, tagTitleColor }: 
                 source={image}
             />
             <View style={{ marginHorizontal: 5 }} >
-                <TagComp tag={tag} tagTitleColor={tagTitleColor} borderColor={colors.purple} />
-                <Text style={[styles.title, { color: titleColor }]}>{title!}</Text>
+                {tag && <TagComp tag={tag} tagTitleColor={tagTitleColor} borderColor={colors.purple} />}
+                <Text style={[styles.title, { color: titleColor , marginTop: tag ? 4 : 8 }]}>{title!}</Text>
             </View>
 
         </TouchableOpacity>
@@ -45,7 +45,6 @@ const styles = StyleSheet.create({
         resizeMode: 'cover',
     },
     title: {
-        marginTop: 4,
         marginLeft: 4,
         fontFamily: 'sukumvit-semibold',
         fontSize: 16,
