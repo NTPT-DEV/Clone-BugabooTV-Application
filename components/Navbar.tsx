@@ -2,7 +2,7 @@ import { colors } from '@/constants/utils';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Crown, Menu, Store } from 'lucide-react-native';
 import { useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { Pressable, StyleSheet, View } from 'react-native';
 import BagabooTVLogo from '../assets/svg/bugaboo-tv.svg';
 import HelpIcon from '../assets/svg/helpIcon.svg';
 import MenuModal from './MenuModal';
@@ -11,15 +11,22 @@ import MenuModal from './MenuModal';
 const Navbar = () => {
     const [openMenu, setOpenMenu] = useState(false)
 
-    const openModal = () => setOpenMenu(true)
-    const closeModal = () => setOpenMenu(false)
-
+    const openModal = () => {
+        setOpenMenu(openMenu => !openMenu);
+        console.log("Opening modal");
+    }
+    const closeModal = () => {
+        setOpenMenu(false);
+        console.log("Closing modal");
+    }
 
     return (
         <>
             <View style={styles.navBar}>
                 <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-                    <Menu color={"black"} width={24} height={24} />
+                    <Pressable onPress={openModal}>
+                        <Menu color={"black"} width={24} height={24} />
+                    </Pressable>
                     <BagabooTVLogo width={130} height={130} />
                 </View>
                 <View style={styles.containerRightIcon}>
@@ -49,8 +56,8 @@ const Navbar = () => {
                         <Crown fill={'white'} color={'white'} width={15} height={15} />
                     </LinearGradient>
                 </View>
+                <MenuModal openMenu={openMenu} closeModal={closeModal} />
             </View>
-            <MenuModal open={openMenu} close={closeModal} />
         </>
     )
 }
